@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sigmachat</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="layout">
+        <!-- Left Sidebar -->
+        <nav class="sidebar">
+            <div class="logo">
+                <h1>Σ</h1>
+            </div>
+            <div class="nav-links">
+                <a href="/home.html" class="active"><i class="fas fa-home"></i> <span>Home</span></a>
+                <a href="/profile.html"><i class="fas fa-user"></i> <span>Profile</span></a>
+                <a href="#"><i class="fas fa-bell"></i> <span>Notifications</span></a>
+            </div>
+            <button class="post-btn" id="createPostBtn"><i class="fas fa-plus"></i> <span>Sigmapost</span></button>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Post Creation -->
+            <div class="create-post">
+                <img src="/uploads/default-avatar.png" alt="Your avatar" class="avatar" id="userAvatar">
+                <div class="post-input-container">
+                    <textarea placeholder="What's on your sigma mind?" id="postInput"></textarea>
+                    <div class="post-actions">
+                        <div class="post-attachments">
+                            <label for="imageInput" class="image-upload">
+                                <i class="far fa-image"></i>
+                            </label>
+                            <input type="file" id="imageInput" accept="image/*" style="display: none">
+                        </div>
+                        <button class="post-submit" id="submitPost">Post</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feed -->
+            <div class="feed" id="postsFeed">
+                <!-- Posts will be dynamically added here -->
+            </div>
+        </main>
+
+        <!-- Right Sidebar -->
+        <aside class="right-sidebar">
+            <div class="search-container">
+                <i class="fas fa-search"></i>
+                <input type="search" placeholder="Search Sigmachat">
+            </div>
+            <div class="trending-section">
+                <h2>Trending</h2>
+                <div class="trending-item">
+                    <span class="trend-category">Technology</span>
+                    <span class="trend-tag">#SigmaGrindset</span>
+                    <span class="trend-posts">10.5K posts</span>
+                </div>
+            </div>
+            <div class="who-to-follow">
+                <h2>Who to follow</h2>
+                <!-- Suggested users will go here -->
+            </div>
+        </aside>
+    </div>
+
+    <!-- Post Modal -->
+    <div class="modal" id="postModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Create Sigmapost</h2>
+            <textarea placeholder="What's on your sigma mind?"></textarea>
+            <div class="modal-actions">
+                <label for="modalImageInput" class="image-upload">
+                    <i class="far fa-image"></i>
+                </label>
+                <input type="file" id="modalImageInput" accept="image/*" style="display: none">
+                <button class="post-submit">Post</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="home.js"></script>
+</body>
+</html> 
